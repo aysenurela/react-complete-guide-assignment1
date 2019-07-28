@@ -4,24 +4,20 @@ import UserInput from '../src/UserInput'
 
 class App extends Component {
 
-  constructor(props) {
-    super(props)
-    this.state={
-      userName:["Nur","Ela"]
-    }
+  state={
+    userName:"Nur"
   }
-
+  
   changeUserName (event) {
-    this.setState({userName:[event.target.value,"Ela"]})
+    this.setState({userName:event.target.value})
   }
 
   render() {
     return (
-      <div className="container">
-          learn react
-          <UserOutput userName={this.state.userName[0]}/>
-          <UserOutput userName={this.state.userName[1]}/>
-          <UserInput value={this.state.userName[0]} changeUserName={this.changeUserName.bind(this)} />
+      <div>
+          <UserInput value={this.state.userName} changeUserName={this.changeUserName.bind(this)} />
+          <UserOutput userName={this.state.userName}/>
+          <UserOutput userName="Ela"/>
       </div>
     )
   }

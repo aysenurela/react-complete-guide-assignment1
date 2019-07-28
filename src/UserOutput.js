@@ -1,14 +1,13 @@
-import  React, { Component} from 'react';
+import  React from 'react';
+import "./design.css"
 
-class UserOutput extends Component {
-render() {
+function UserOutput (props)  {
         return (
-            <div>
-                <p> Paragraph 1 {this.props.userName} </p>
+            <div className="container">
+                <p> Paragraph 1 {props.userName} </p>
                 <p> Paragraph 2 </p>
             </div>
         )
-    }
 }
 
 export default UserOutput 

@@ -1,10 +1,12 @@
-import React, { Component} from 'react';
+import React from 'react';
 
 function UserInput(props) {
 
   const style={
     border:"none",
-    backgroundColor:"lightgrey"
+    backgroundColor:"lightblue",
+    padding:"20px",
+    margin:"20px"
   }
 
     return (
